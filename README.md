@@ -66,8 +66,9 @@ Want to translate this integration into your language? Check the [translation gu
 
 ## 📸 Screenshots
 
-<img width="1027" height="827" alt="imatge" src="https://github.com/user-attachments/assets/c2ccd633-c9e7-4083-8a8c-1845cf3bb867" />
-<img width="1101" height="786" alt="imatge" src="https://github.com/user-attachments/assets/76700ad8-a762-45ac-a243-7641c177a25f" />
+<img width="1056" height="822" alt="imatge" src="https://github.com/user-attachments/assets/edaa6c53-a85f-4706-8b7e-0cc470f051ff" />
+<img width="1100" height="783" alt="imatge" src="https://github.com/user-attachments/assets/36106afb-5a76-4931-8ff7-c6db8aba6f0f" />
+<img width="787" height="547" alt="imatge" src="https://github.com/user-attachments/assets/012ece4c-a5b8-47c2-8a47-257fd553dd43" />
 
 ---
 
