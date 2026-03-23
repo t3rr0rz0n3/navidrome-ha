@@ -4,8 +4,6 @@ Want to help translate this integration into your language? Awesome! 🎉
 
 This integration uses Home Assistant's built-in translation system.
 
----
-
 ## 📁 Translation files
 
 All translations are located in: custom_components/navidrome/translations/
@@ -16,8 +14,6 @@ Each language has its own file:
 + es.json
 + ca.json
 + ...
-  
----
 
 ## ➕ Adding a new language
 
@@ -30,21 +26,15 @@ it.json → Italian
 
 👉 Use ISO 639-1 language codes
 
----
-
 ## ✏️ Translate the content
 
 Translate only the **values**, never the keys.
-
----
 
 ## 🚀 Submitting your translation
 
 + Fork the repository
 + Add your translation file
 + Open a Pull Request
-
----
 
 ## ❤️ Thanks
 
