@@ -4,6 +4,8 @@
 [![License][license-shield]](LICENSE)
 [![hacs][hacsbadge]][hacs]
 
+<img width="606" height="611" alt="imatge" src="https://github.com/user-attachments/assets/1300247a-34fd-4765-868c-e311b64fd37b" />
+
 # Navidrome Home Assistant Integration
 
 A custom Home Assistant integration to connect your Navidrome server using the Subsonic API.
@@ -64,7 +66,8 @@ Want to translate this integration into your language? Check the [translation gu
 
 ## 📸 Screenshots
 
-WIP 
+<img width="1027" height="827" alt="imatge" src="https://github.com/user-attachments/assets/c2ccd633-c9e7-4083-8a8c-1845cf3bb867" />
+<img width="1101" height="786" alt="imatge" src="https://github.com/user-attachments/assets/76700ad8-a762-45ac-a243-7641c177a25f" />
 
 ---
 
