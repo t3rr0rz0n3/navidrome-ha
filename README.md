@@ -1,3 +1,7 @@
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/hacs/integration)
+[![GitHub release](https://img.shields.io/github/release/t3rr0rz0n3/navidrome-ha.svg)](https://github.com/t3rr0rz0n3/navidrome-ha/releases)
+![GitHub stars](https://img.shields.io/github/stars/t3rr0rz0n3/navidrome-ha?style=for-the-badge)
+
 # Navidrome Home Assistant Integration
 
 A custom Home Assistant integration to connect your Navidrome server using the Subsonic API.
