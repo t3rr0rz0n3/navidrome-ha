@@ -1,0 +1,7 @@
+{
+  "name": "Navidrome HA",
+  "content_in_root": false,
+  "domains": ["navidrome"],
+  "render_readme": true,
+  "iot_class": "local_polling"
+}
