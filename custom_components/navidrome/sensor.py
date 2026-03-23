@@ -38,9 +38,9 @@ class BaseNavidromeSensor(CoordinatorEntity, SensorEntity):
 class NavidromeScanStatusSensor(BaseNavidromeSensor):
     def __init__(self, coordinator):
         super().__init__(coordinator)
-        self._attr_name = "Navidrome Scan Status"
-        self._attr_unique_id = "navidrome_scan_status"
+        self._attr_has_entity_name = True
         self._attr_translation_key = "scan_status"
+        self._attr_unique_id = "navidrome_scan_status"
 
     @property
     def state(self):
