@@ -10,6 +10,8 @@ This integration provides real-time information about your music server, includi
 - [Español](docs/README.es.md)
 - [Català](docs/README.ca.md)
 
+Want to translate this integration into your language? Check the [translation guide](docs/translate.md)
+
 ---
 
 ## 📦 Installation (via HACS)
