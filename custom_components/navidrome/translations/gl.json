@@ -1,0 +1,62 @@
+{
+    "config": {
+      "step": {
+        "user": {
+          "title": "Configurar Navidrome",
+          "description": "Introduce os datos do servidor Navidrome",
+          "data": {
+            "url": "URL do servidor",
+            "username": "Usuario",
+            "password": "Contrasinal"
+          }
+        }
+      },
+      "error": {
+        "cannot_connect": "Non se pode conectar ao servidor",
+        "invalid_auth": "Credenciais incorrectas",
+        "unknown": "Erro descoñecido"
+      },
+      "abort": {
+        "already_configured": "Este servidor xa está configurado"
+      }
+    },
+    "entity": {
+      "button": {
+        "start_scan": {
+          "name": "Iniciar escaneo"
+        }
+      },
+      "sensor": {
+        "scan_status": {
+          "name": "Estado do escaneo",
+          "state": {
+            "scanning": "Escaneando",
+            "idle": "Inactivo",
+            "unknown": "Descoñecido"
+          }
+        },
+        "last_scan": {
+          "name": "Último escaneo"
+        },
+        "total_genres": {
+          "name": "Total xéneros"
+        },
+        "total_artists": {
+          "name": "Total artistas"
+        },
+        "total_songs": {
+          "name": "Total cancións"
+        },
+        "current_song": {
+          "name": "Canción actual"
+        },
+        "current_artist": {
+          "name": "Artista actual"
+        },
+        "current_album": {
+          "name": "Disco actual"
+        }
+      }
+    }
+  }
+  
