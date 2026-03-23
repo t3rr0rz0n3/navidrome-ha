@@ -1,0 +1,13 @@
+{
+    "domain": "navidrome",
+    "icon": "mdi:music",
+    "name": "Navidrome HA",
+    "version": "0.0.1",
+    "documentation": "",
+    "issue_tracker": "",
+    "requirements": [],
+    "dependencies": [],
+    "codeowners": ["@t3rr0rz0n3"],
+    "iot_class": "cloud_polling",
+    "config_flow": true
+  }

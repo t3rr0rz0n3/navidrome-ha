@@ -1,0 +1,61 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configurar Navidrome",
+        "description": "Introdueix les dades del servidor Navidrome",
+        "data": {
+          "url": "URL del servidor",
+          "username": "Usuari",
+          "password": "Contrasenya"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "No es pot connectar al servidor",
+      "invalid_auth": "Credencials incorrectes",
+      "unknown": "Error desconegut"
+    },
+    "abort": {
+      "already_configured": "Aquest servidor ja està configurat"
+    }
+  },
+  "entity": {
+    "button": {
+      "start_scan": {
+        "name": "Iniciar escaneig"
+      }
+    },
+    "sensor": {
+      "scan_status": {
+        "name": "Estat de l'escaneig",
+        "state": {
+          "scanning": "Escanejant",
+          "idle": "Inactiu",
+          "unknown": "Desconegut"
+        }
+      },
+      "last_scan": {
+        "name": "Últim escaneig"
+      },
+      "total_genres": {
+        "name": "Total gèneres"
+      },
+      "total_artists": {
+        "name": "Total artistes"
+      },
+      "total_songs": {
+        "name": "Total cançons"
+      },
+      "current_song": {
+        "name": "Cançó actual"
+      },
+      "current_artist": {
+        "name": "Artista actual"
+      },
+      "current_album": {
+        "name": "Disc actual"
+      }
+    }
+  }
+}
