@@ -1,6 +1,8 @@
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/hacs/integration)
-[![GitHub release](https://img.shields.io/github/release/t3rr0rz0n3/navidrome-ha.svg)](https://github.com/t3rr0rz0n3/navidrome-ha/releases)
-![GitHub stars](https://img.shields.io/github/stars/t3rr0rz0n3/navidrome-ha?style=for-the-badge)
+[![GitHub Release][releases-shield]][releases]
+[![GitHub Activity][commits-shield]][commits]
+[![Downloads][download-latest-shield]](https://github.com/t3rr0rz0n3/navidrome-ha/releases)
+[![License][license-shield]](LICENSE)
+[![hacs][hacsbadge]][hacs]
 
 # Navidrome Home Assistant Integration
 
@@ -69,3 +71,12 @@ WIP
 ## 📄 License
 
 GPL-3.0
+
+[releases-shield]: https://img.shields.io/github/release/t3rr0rz0n3/navidrome-ha.svg?style=for-the-badge
+[releases]: https://github.com/t3rr0rz0n3/navidrome-ha/releases
+[commits-shield]: https://img.shields.io/github/commit-activity/m/t3rr0rz0n3/navidrome-ha.svg?style=for-the-badge
+[commits]: https://github.com/t3rr0rz0n3/navidrome-ha/commits/main
+[download-latest-shield]: https://img.shields.io/github/downloads/t3rr0rz0n3/navidrome-ha/latest/total?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/t3rr0rz0n3/navidrome-ha.svg?style=for-the-badge
+[hacsbadge]: https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge
+[hacs]: https://github.com/hacs/integration
