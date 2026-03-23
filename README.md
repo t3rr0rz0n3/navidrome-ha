@@ -1,8 +1,9 @@
 [![hacs][hacsbadge]][hacs]
 [![GitHub Release][releases-shield]][releases]
 [![GitHub Activity][commits-shield]][commits]
-<!--[![Downloads][download-latest-shield]](https://github.com/t3rr0rz0n3/navidrome-ha/releases)-->
 [![License][license-shield]](LICENSE)
+<!--[![Downloads][download-latest-shield]](https://github.com/t3rr0rz0n3/navidrome-ha/releases)-->
+
 
 
 <img width="606" height="611" alt="imatge" src="https://github.com/user-attachments/assets/1300247a-34fd-4765-868c-e311b64fd37b" />
