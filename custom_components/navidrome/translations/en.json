@@ -5,7 +5,7 @@
           "title": "Set up Navidrome",
           "description": "Enter your Navidrome server details",
           "data": {
-            "url": "Server URL",
+            "host": "Server URL",
             "username": "Username",
             "password": "Password"
           }

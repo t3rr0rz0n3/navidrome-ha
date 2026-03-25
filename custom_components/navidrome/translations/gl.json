@@ -5,7 +5,7 @@
           "title": "Configurar Navidrome",
           "description": "Introduce os datos do servidor Navidrome",
           "data": {
-            "url": "URL do servidor",
+            "host": "URL do servidor",
             "username": "Usuario",
             "password": "Contrasinal"
           }
