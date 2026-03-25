@@ -3,11 +3,12 @@
       "step": {
         "user": {
           "title": "Configurar Navidrome",
-          "description": "Introduce los datos del servidor Navidrome",
+          "description": "Introduce los datos de tu servidor Navidrome sin incluir http/https; si es local, usa IP:puerto (por defecto 4533) y si es un dominio, introduce únicamente el dominio.",
           "data": {
-            "url": "URL del servidor",
+            "url": "Host o URL",
             "username": "Usuario",
-            "password": "Contraseña"
+            "password": "Contraseña",
+            "use_ssl": "Habilita SSL (por lo tanto se usa https://)"
           }
         }
       },
