@@ -1,8 +1,7 @@
 import hashlib
-import random
+import secrets
 import string
 import requests
-
 
 class NavidromeAPI:
     def __init__(self, base_url, username, password):
@@ -11,7 +10,8 @@ class NavidromeAPI:
         self.password = password
 
     def _generate_token(self):
-        salt = ''.join(random.choices(string.ascii_letters + string.digits, k=6))
+        alphabet = string.ascii_letters + string.digits
+        salt = ''.join(secrets.choice(alphabet) for _ in range(16))
         token = hashlib.md5((self.password + salt).encode()).hexdigest()
         return salt, token
 
