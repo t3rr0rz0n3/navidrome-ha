@@ -5,6 +5,7 @@ from homeassistant.const import CONF_URL, CONF_USERNAME, CONF_PASSWORD
 
 from .const import DOMAIN
 
+CONF_USE_SSL = "use_ssl"
 
 class NavidromeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     VERSION = 1
@@ -22,6 +23,7 @@ class NavidromeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             vol.Required(CONF_URL): str,
             vol.Required(CONF_USERNAME): str,
             vol.Required(CONF_PASSWORD): str,
+            vol.Optional(CONF_USE_SSL, default=True): bool,
         })
 
         return self.async_show_form(
