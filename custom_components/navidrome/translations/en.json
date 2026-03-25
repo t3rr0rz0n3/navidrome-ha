@@ -3,11 +3,12 @@
       "step": {
         "user": {
           "title": "Set up Navidrome",
-          "description": "Enter your Navidrome server details",
+          "description": "Enter your Navidrome server details without including http/https; if it's local, use IP:port (default 4533), and if it's a domain, enter only the domain.",
           "data": {
-            "host": "Server URL",
+            "host": "Host or URL",
             "username": "Username",
-            "password": "Password"
+            "password": "Password",
+            "use_ssl": "Enable SSL (https:// will be used)"
           }
         }
       },

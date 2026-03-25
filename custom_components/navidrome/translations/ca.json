@@ -3,11 +3,12 @@
     "step": {
       "user": {
         "title": "Configurar Navidrome",
-        "description": "Introdueix les dades del servidor Navidrome",
+        "description": "Introdueix les dades del servidor Navidrome sense incloure http/https; si és local utilitza IP:Port (per defecte 4533) i si és un domini, introdueix unicament el domini.",
         "data": {
           "host": "URL del servidor",
           "username": "Usuari",
-          "password": "Contrasenya"
+          "password": "Contrasenya",
+          "use_ssl": "Habilita SSL (per tant, s'utilitza https://)"
         }
       }
     },
