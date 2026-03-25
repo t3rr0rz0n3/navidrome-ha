@@ -1,20 +1,23 @@
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 
-from .const import DOMAIN, CONF_URL, CONF_USERNAME, CONF_PASSWORD
+from .const import DOMAIN, CONF_HOST, CONF_USERNAME, CONF_PASSWORD, CONF_USE_SSL
 from .api import NavidromeAPI
 from .coordinator import NavidromeCoordinator
-
 
 async def async_setup(hass: HomeAssistant, config: dict):
     return True
 
-
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
     hass.data.setdefault(DOMAIN, {})
 
+    use_ssl = entry.data.get(CONF_USE_SSL, True)
+    host = entry.data[CONF_HOST]
+    scheme = "https" if use_ssl else "http"
+    base_url = f"{scheme}://{host}"
+
     api = NavidromeAPI(
-        entry.data[CONF_URL],
+        base_url,
         entry.data[CONF_USERNAME],
         entry.data[CONF_PASSWORD],
     )

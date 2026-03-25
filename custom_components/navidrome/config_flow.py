@@ -1,7 +1,7 @@
 import voluptuous as vol
 
 from homeassistant import config_entries
-from homeassistant.const import CONF_URL, CONF_USERNAME, CONF_PASSWORD
+from homeassistant.const import CONF_HOST, CONF_USERNAME, CONF_PASSWORD
 
 from .const import DOMAIN
 
@@ -15,12 +15,12 @@ class NavidromeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
         if user_input is not None:
             return self.async_create_entry(
-                title=user_input[CONF_URL],
+                title=user_input[CONF_HOST],
                 data=user_input,
             )
 
         schema = vol.Schema({
-            vol.Required(CONF_URL): str,
+            vol.Required(CONF_HOST): str,
             vol.Required(CONF_USERNAME): str,
             vol.Required(CONF_PASSWORD): str,
             vol.Optional(CONF_USE_SSL, default=True): bool,
