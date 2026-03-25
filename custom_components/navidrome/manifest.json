@@ -2,7 +2,7 @@
     "domain": "navidrome",
     "icon": "mdi:music",
     "name": "Navidrome HA",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "documentation": "https://github.com/t3rr0rz0n3/navidrome-ha/blob/main/README",
     "issue_tracker": "https://github.com/t3rr0rz0n3/navidrome-ha/issues",
     "requirements": [],
