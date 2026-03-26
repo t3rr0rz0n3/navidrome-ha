@@ -13,10 +13,7 @@ async def async_setup_entry(hass, entry, async_add_entities):
         NavidromeLastScanSensor(coordinator),
         NavidromeTotalGenresSensor(coordinator),
         NavidromeTotalArtistsSensor(coordinator),
-        NavidromeTotalSongsSensor(coordinator),
-        NavidromeCurrentSongSensor(coordinator),
-        NavidromeCurrentArtistSensor(coordinator),
-        NavidromeCurrentAlbumSensor(coordinator),
+        NavidromeTotalSongsSensor(coordinator)
     ])
 
 
@@ -160,54 +157,3 @@ def get_current_track(data):
         return None
 
     return tracks[0]
-
-class NavidromeCurrentSongSensor(BaseNavidromeSensor):
-    def __init__(self, coordinator):
-        super().__init__(coordinator)
-        self._attr_has_entity_name = True
-        self._attr_translation_key = "current_song"
-        self._attr_unique_id = "navidrome_current_song"
-        self._attr_icon = "mdi:music-note"
-
-    @property
-    def state(self):
-        track = get_current_track(self.coordinator.data)
-
-        if not track:
-            return None
-
-        return track.get("title")
-
-class NavidromeCurrentArtistSensor(BaseNavidromeSensor):
-    def __init__(self, coordinator):
-        super().__init__(coordinator)
-        self._attr_has_entity_name = True
-        self._attr_translation_key = "current_artist"
-        self._attr_unique_id = "navidrome_current_artist"
-        self._attr_icon = "mdi:account-music"
-
-    @property
-    def state(self):
-        track = get_current_track(self.coordinator.data)
-
-        if not track:
-            return None
-
-        return track.get("artist")
-
-class NavidromeCurrentAlbumSensor(BaseNavidromeSensor):
-    def __init__(self, coordinator):
-        super().__init__(coordinator)
-        self._attr_has_entity_name = True
-        self._attr_translation_key = "current_album"
-        self._attr_unique_id = "navidrome_current_album"
-        self._attr_icon = "mdi:album"
-
-    @property
-    def state(self):
-        track = get_current_track(self.coordinator.data)
-
-        if not track:
-            return None
-
-        return track.get("album")
