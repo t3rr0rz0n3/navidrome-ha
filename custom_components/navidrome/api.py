@@ -60,3 +60,7 @@ class NavidromeAPI:
     def get_artists(self):
         data = self._request("getArtists.view")
         return data.get("subsonic-response", {}).get("artists", {}).get("index", [])
+
+    def get_playlists(self):
+        data = self._request("getPlaylists.view")
+        return data.get("subsonic-response", {}).get("playlists", {}).get("playlist", [])
