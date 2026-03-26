@@ -47,15 +47,6 @@
         },
         "total_songs": {
           "name": "Total songs"
-        },
-        "current_song": {
-          "name": "Current song"
-        },
-        "current_artist": {
-          "name": "Current artist"
-        },
-        "current_album": {
-          "name": "Current album"
         }
       }
     }
