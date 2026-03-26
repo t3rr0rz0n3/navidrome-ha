@@ -147,17 +147,6 @@ class NavidromeTotalSongsSensor(BaseNavidromeSensor):
 
         return total
 
-    def get_current_track(data):
-        if not data:
-            return None
-
-        tracks = data.get("now_playing")
-
-        if not tracks or len(tracks) == 0:
-            return None
-
-        return tracks[0]
-
 class NavidromeTotalPlaylistsSensor(BaseNavidromeSensor):
     def __init__(self, coordinator):
         super().__init__(coordinator)
