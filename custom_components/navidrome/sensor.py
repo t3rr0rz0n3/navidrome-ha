@@ -147,13 +147,13 @@ class NavidromeTotalSongsSensor(BaseNavidromeSensor):
 
         return total
 
-def get_current_track(data):
-    if not data:
-        return None
+    def get_current_track(data):
+        if not data:
+            return None
 
-    tracks = data.get("now_playing")
+        tracks = data.get("now_playing")
 
-    if not tracks or len(tracks) == 0:
-        return None
+        if not tracks or len(tracks) == 0:
+            return None
 
-    return tracks[0]
+        return tracks[0]
