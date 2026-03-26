@@ -40,7 +40,7 @@ class NavidromeScanStatusSensor(BaseNavidromeSensor):
         self._attr_unique_id = "navidrome_scan_status"
 
     @property
-    def state(self):
+    def native_value(self):
         data = self.coordinator.data
 
         if not data:
@@ -64,7 +64,7 @@ class NavidromeLastScanSensor(BaseNavidromeSensor):
         self._attr_state_class = "measurement"
         
     @property
-    def state(self):
+    def native_value(self):
         data = self.coordinator.data
 
         if not data:
@@ -91,7 +91,7 @@ class NavidromeTotalGenresSensor(BaseNavidromeSensor):
         self._attr_icon = "mdi:music"
 
     @property
-    def state(self):
+    def native_value(self):
         data = self.coordinator.data
 
         if not data:
@@ -110,7 +110,7 @@ class NavidromeTotalArtistsSensor(BaseNavidromeSensor):
         self._attr_icon = "mdi:account-music"
 
     @property
-    def state(self):
+    def native_value(self):
         data = self.coordinator.data
 
         if not data:
@@ -135,7 +135,7 @@ class NavidromeTotalSongsSensor(BaseNavidromeSensor):
         #self._attr_native_unit_of_measurement = "songs"
 
     @property
-    def state(self):
+    def native_value(self):
         data = self.coordinator.data
 
         if not data:
@@ -156,7 +156,7 @@ class NavidromeTotalPlaylistsSensor(BaseNavidromeSensor):
         self._attr_icon = "mdi:playlist-music"
 
     @property
-    def state(self):
+    def native_value(self):
         data = self.coordinator.data
 
         if not data:
