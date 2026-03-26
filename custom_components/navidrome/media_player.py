@@ -34,6 +34,19 @@ class NavidromeMediaPlayer(CoordinatorEntity, MediaPlayerEntity):
 
         return STATE_PLAYING
 
+    @property
+    def device_info(self):
+        system = self.coordinator.data.get("system", {})
+
+        return {
+            "identifiers": {("navidrome", "server")},
+            "name": "Navidrome",
+            "manufacturer": "Navidrome",
+            "model": "Music Server",
+            "sw_version": system.get("version"),
+            "configuration_url": self.coordinator.api.base_url,
+        }
+
     def _get_current_track(self):
         data = self.coordinator.data
 
@@ -72,22 +85,6 @@ class NavidromeMediaPlayer(CoordinatorEntity, MediaPlayerEntity):
     @property
     def media_album_name(self):
         return self._get("album")
-    
-    @property
-    def extra_state_attributes(self):
-        track = self._get_current_track()
-
-        if not track:
-            return {}
-
-        attrs = {
-            "track_number": track.get("track"),
-            "year": track.get("year"),
-            "genre": track.get("genre"),
-            "path": track.get("path"),
-        }
-
-        return {k: v for k, v in attrs.items() if v is not None}
 
     @property
     def media_duration(self):
@@ -116,63 +113,18 @@ class NavidromeMediaPlayer(CoordinatorEntity, MediaPlayerEntity):
     def entity_picture(self):
         return self.media_image_url
 
-    # @property
-    # def supported_features(self):
-    #     track = self._get_current_track()
-
-    #     if not track or not track.get("playerId"):
-    #         return 0
-
-    #     return (
-    #         MediaPlayerEntityFeature.NEXT_TRACK |
-    #         MediaPlayerEntityFeature.PREVIOUS_TRACK
-    #     )
-
-    # async def async_media_next_track(self):
-    #     track = self._get_current_track()
-
-    #     if not track:
-    #         return
-
-    #     player_id = track.get("playerId")
-
-    #     if not player_id:
-    #         return
-
-    #     await self.hass.async_add_executor_job(
-    #         self.coordinator.api.next,
-    #         player_id
-    #     )
-
-    #     await self.coordinator.async_request_refresh()
-    
-    # async def async_media_previous_track(self):
-    #     track = self._get_current_track()
-
-    #     if not track:
-    #         return
-
-    #     player_id = track.get("playerId")
-
-    #     if not player_id:
-    #         return
-
-    #     await self.hass.async_add_executor_job(
-    #         self.coordinator.api.previous,
-    #         player_id
-    #     )
-
-    #     await self.coordinator.async_request_refresh()
-
     @property
-    def device_info(self):
-        system = self.coordinator.data.get("system", {})
+    def extra_state_attributes(self):
+        track = self._get_current_track()
 
-        return {
-            "identifiers": {("navidrome", "server")},
-            "name": "Navidrome",
-            "manufacturer": "Navidrome",
-            "model": "Music Server",
-            "sw_version": system.get("version"),
-            "configuration_url": self.coordinator.api.base_url,
+        if not track:
+            return {}
+
+        attrs = {
+            "track_number": track.get("track"),
+            "year": track.get("year"),
+            "genre": track.get("genre"),
+            "path": track.get("path"),
         }
+
+        return {k: v for k, v in attrs.items() if v is not None}
