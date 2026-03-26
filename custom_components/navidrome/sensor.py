@@ -157,3 +157,22 @@ class NavidromeTotalSongsSensor(BaseNavidromeSensor):
             return None
 
         return tracks[0]
+
+class NavidromeTotalPlaylistsSensor(BaseNavidromeSensor):
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+        self._attr_has_entity_name = True
+        self._attr_translation_key = "total_playlists"
+        self._attr_unique_id = "navidrome_total_playlists"
+        self._attr_icon = "mdi:playlist-music"
+
+    @property
+    def state(self):
+        data = self.coordinator.data
+
+        if not data:
+            return 0
+
+        playlists = data.get("playlists", [])
+
+        return len(playlists)
