@@ -89,6 +89,15 @@ class NavidromeMediaPlayer(CoordinatorEntity, MediaPlayerEntity):
     @property
     def media_duration(self):
         return self._get("duration")
+    
+    @property
+    def media_position(self):
+        minutes_ago = self._get("minutesAgo")
+
+        if minutes_ago is not None:
+            return minutes_ago * 60
+            
+        return None
 
     @property
     def media_content_type(self):
