@@ -41,6 +41,10 @@ class NavidromeCoordinator(DataUpdateCoordinator):
                 self.api.get_artists
             )
 
+            playlists = await self.hass.async_add_executor_job(
+                self.api.get_playlists
+            )
+
             return {
                 "now_playing": now_playing,
                 "scan_status": scan_status,
