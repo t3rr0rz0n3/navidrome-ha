@@ -47,6 +47,9 @@
         },
         "total_songs": {
           "name": "Total songs"
+        },
+        "total_playlists": {
+          "name": "Total playlists"
         }
       }
     }
