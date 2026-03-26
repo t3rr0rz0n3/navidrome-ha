@@ -13,7 +13,8 @@ async def async_setup_entry(hass, entry, async_add_entities):
         NavidromeLastScanSensor(coordinator),
         NavidromeTotalGenresSensor(coordinator),
         NavidromeTotalArtistsSensor(coordinator),
-        NavidromeTotalSongsSensor(coordinator)
+        NavidromeTotalSongsSensor(coordinator),
+        NavidromeTotalPlaylistsSensor(coordinator)
     ])
 
 
@@ -26,11 +27,10 @@ class BaseNavidromeSensor(CoordinatorEntity, SensorEntity):
             "identifiers": {("navidrome", "server")},
             "name": "Navidrome",
             "manufacturer": "Navidrome",
-            "model": "Music Server",
-            "sw_version": system.get("version"),
+            "model": system.get("type", "Music Server"),
+            "sw_version": system.get("serverVersion"),
             "configuration_url": self.coordinator.api.base_url,
         }
-
 
 class NavidromeScanStatusSensor(BaseNavidromeSensor):
     def __init__(self, coordinator):
@@ -146,6 +146,17 @@ class NavidromeTotalSongsSensor(BaseNavidromeSensor):
         total = sum(g.get("songCount", 0) for g in genres)
 
         return total
+
+    def get_current_track(data):
+        if not data:
+            return None
+
+        tracks = data.get("now_playing")
+
+        if not tracks or len(tracks) == 0:
+            return None
+
+        return tracks[0]
 
 class NavidromeTotalPlaylistsSensor(BaseNavidromeSensor):
     def __init__(self, coordinator):

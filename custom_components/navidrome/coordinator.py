@@ -51,6 +51,7 @@ class NavidromeCoordinator(DataUpdateCoordinator):
                 "system": system,
                 "genres": genres,
                 "artists": artists,
+                "playlists": playlists,
             }
 
         except Exception as err:

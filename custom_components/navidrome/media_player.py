@@ -43,8 +43,8 @@ class NavidromeMediaPlayer(CoordinatorEntity, MediaPlayerEntity):
             "identifiers": {("navidrome", "server")},
             "name": "Navidrome",
             "manufacturer": "Navidrome",
-            "model": system.get("type", "Music Server"),
-            "sw_version": system.get("serverVersion"),
+            "model": "Music Server",
+            "sw_version": system.get("version"),
             "configuration_url": self.coordinator.api.base_url,
         }
 
@@ -90,7 +90,7 @@ class NavidromeMediaPlayer(CoordinatorEntity, MediaPlayerEntity):
     @property
     def media_duration(self):
         return self._get("duration")
-    
+
     @property
     def media_position(self):
         minutes_ago = self._get("minutesAgo")

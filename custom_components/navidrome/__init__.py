@@ -12,7 +12,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
     hass.data.setdefault(DOMAIN, {})
 
     use_ssl = entry.data.get(CONF_USE_SSL, True)
-    host = entry.data[CONF_HOST].replace("http://", "").replace("https://", "").strip()
+    host = entry.data[CONF_HOST].replace("http://", "").replace("https://", "")
     scheme = "https" if use_ssl else "http"
     base_url = f"{scheme}://{host}"
 
