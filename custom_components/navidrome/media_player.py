@@ -22,7 +22,7 @@ class NavidromeMediaPlayer(CoordinatorEntity, MediaPlayerEntity):
         self._attr_unique_id = "navidrome_media_player"
 
     @property
-    def native_value(self):
+    def state(self):
         data = self.coordinator.data
 
         if not data:
