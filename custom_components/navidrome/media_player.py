@@ -2,6 +2,7 @@ from homeassistant.components.media_player import MediaPlayerEntity
 from homeassistant.const import STATE_IDLE, STATE_PLAYING
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from homeassistant.components.media_player import MediaPlayerEntityFeature
+from homeassistant.util import dt as dt_util
 
 from .const import DOMAIN
 
@@ -98,6 +99,10 @@ class NavidromeMediaPlayer(CoordinatorEntity, MediaPlayerEntity):
             return minutes_ago * 60
             
         return None
+
+    @property
+    def media_position_updated_at(self):
+        return dt_util.utcnow()
 
     @property
     def media_content_type(self):
