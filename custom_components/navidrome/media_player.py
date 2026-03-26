@@ -43,8 +43,8 @@ class NavidromeMediaPlayer(CoordinatorEntity, MediaPlayerEntity):
             "identifiers": {("navidrome", "server")},
             "name": "Navidrome",
             "manufacturer": "Navidrome",
-            "model": "Music Server",
-            "sw_version": system.get("version"),
+            "model": system.get("type", "Music Server"),
+            "sw_version": system.get("serverVersion"),
             "configuration_url": self.coordinator.api.base_url,
         }
 
