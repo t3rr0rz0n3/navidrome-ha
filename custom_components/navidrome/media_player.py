@@ -80,7 +80,7 @@ class NavidromeMediaPlayer(CoordinatorEntity, MediaPlayerEntity):
 
     @property
     def media_artist(self):
-        return self._get("artist")
+        return self._get("displayArtist")
 
     @property
     def media_album_name(self):
@@ -89,6 +89,14 @@ class NavidromeMediaPlayer(CoordinatorEntity, MediaPlayerEntity):
     @property
     def media_duration(self):
         return self._get("duration")
+
+    @property
+    def media_content_type(self):
+        return self._get("mediaType")
+
+    @property
+    def media_content_id(self):
+        return self._get("id")
 
     @property
     def media_image_url(self):
@@ -125,6 +133,11 @@ class NavidromeMediaPlayer(CoordinatorEntity, MediaPlayerEntity):
             "year": track.get("year"),
             "genre": track.get("genre"),
             "path": track.get("path"),
+            "bitrate": track.get("bitRate"),
+            "sampling_rate": track.get("samplingRate"),
+            "channel_count": track.get("channelCount"),
+            "media_player": track.get("playerName"),
+            "username": track.get("username")
         }
 
         return {k: v for k, v in attrs.items() if v is not None}
