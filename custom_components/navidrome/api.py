@@ -60,9 +60,3 @@ class NavidromeAPI:
     def get_artists(self):
         data = self._request("getArtists.view")
         return data.get("subsonic-response", {}).get("artists", {}).get("index", [])
-
-    def next(self, player_id):
-        return self._request("next.view", {"id": player_id})
-
-    def previous(self, player_id):
-        return self._request("previous.view", {"id": player_id})
